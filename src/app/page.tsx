@@ -9,8 +9,8 @@ export default async function Home() {
   const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
   const products: IProduct[] = await res.json();
 
-  const isUp = products.filter(p => p.change.dir === 'down');
-  const isDown = products.filter(p => p.change.dir === 'up');
+  const isUp = products.filter(p => p.change.dir === 'up');
+  const isDown = products.filter(p => p.change.dir === 'down');
   return (
     <div className="max-w-6xl container mx-auto py-4 sm:py-0">
       <BannerPage />

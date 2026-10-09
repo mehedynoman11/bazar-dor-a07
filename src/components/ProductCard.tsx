@@ -45,8 +45,8 @@ const ProductCard = ({ product }: { product: IProduct }) => {
                             <p className='text-sm font-bold'><span className="text-xl font-bold">{banglaNumber(product.today)}</span> টাকা</p>
                         </div>
                         <div className="flex justify-end items-end">
-                            <span className={isUp ? 'text-green-600' : 'text-red-600'}>
-                                {isUp ? `▼ ${product.change.pct}%` : `▲ ${product.change.pct}%`}
+                            <span className={isUp ? 'text-red-600' : 'text-green-600'}>
+                                {isUp ? `▲ ${product.change.pct}%` : `▼ ${product.change.pct}%`}
                             </span>
                         </div>
                     </div>
