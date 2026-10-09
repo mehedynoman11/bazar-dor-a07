@@ -3,6 +3,7 @@ import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import HeaderPage from "@/components/Header";
 import MaruquePage from "@/components/Maruque";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const notoSerif = Noto_Serif_Bengali({
   subsets: ["bengali", "latin"],
@@ -24,7 +25,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <HeaderPage />
         <MaruquePage />
         <main className="bg-[#F0F5F0]">
-        {children}
+          {children}
+          <ToastContainer
+            position="top-right"
+            autoClose={1000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}
+          />
         </main>
       </body>
     </html>
