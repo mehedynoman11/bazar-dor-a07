@@ -36,12 +36,7 @@ const HeaderPage = () => {
 
                 </div>
             </div>
-            <nav>
-                <NavLinks />
-            </nav>
-            <div className="">
-            <MaruquePage />
-            </div>
+            <NavLinks />
         </header>
     );
 };
