@@ -12,7 +12,7 @@ export interface IProduct {
   lastWeek: number
   lastMonth: number
   change: Change
-  markets: Markets[]
+  markets: []
 }
 
 interface Change {
@@ -20,9 +20,3 @@ interface Change {
   pct: number
 }
 
-interface Markets {
-  market: string
-  division: string
-  min: number
-  max: number
-}
