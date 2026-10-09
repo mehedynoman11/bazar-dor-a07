@@ -28,7 +28,7 @@ const SignUpPage = () => {
 
         if (data) {
             toast.success('সাইন আপ সফল হয়েছে');
-            // redirect('/');
+            redirect('/');
         }
 
         if (error) {

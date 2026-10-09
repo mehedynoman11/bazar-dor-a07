@@ -4,6 +4,7 @@ import "./globals.css";
 import HeaderPage from "@/components/Header";
 import MaruquePage from "@/components/Maruque";
 import { Bounce, ToastContainer } from "react-toastify";
+import FooterPage from "@/components/Footer";
 
 const notoSerif = Noto_Serif_Bengali({
   subsets: ["bengali", "latin"],
@@ -21,10 +22,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${notoSerif} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#F0F5F0]">
         <HeaderPage />
         <MaruquePage />
-        <main className="bg-[#F0F5F0]">
+        <main className="">
           {children}
           <ToastContainer
             position="top-right"
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             transition={Bounce}
           />
         </main>
+        <FooterPage />
       </body>
     </html>
   );
