@@ -11,7 +11,7 @@ interface INavLink {
 
 
 const NavLinks = async () => {
-    const res = await fetch("hhttps://api.api-store.workers.dev/api/bazardor/categories");
+    const res = await fetch("https://api.api-store.workers.dev/api/bazardor/categories");
     if (!res.ok) notFound();
     const category: INavLink[] = await res.json();
 
