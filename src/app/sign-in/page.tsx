@@ -1,4 +1,5 @@
 'use client'
+import GoogleBtn from '@/components/GoogleBtn';
 import { authClient } from '@/lib/auth-client';
 
 import React from 'react';
@@ -41,6 +42,7 @@ const SignInPage = () => {
                     <button type='submit' className="btn bg-green-700 text-white mt-4">সাইন ইন করুন</button>
                 </fieldset>
             </form>
+            <GoogleBtn />
         </div>
         </div>
     );
