@@ -9,10 +9,10 @@ const HeaderPage = () => {
 
     return (
         <header className="bg-white">
-            <div className='flex justify-between items-center py-3 max-w-6xl mx-auto container'>
+            <div className='flex justify-between items-center px-2 sm:px-0 py-3 max-w-6xl mx-auto container'>
                 <Link href={'/'}>
                     <div className="flex items-center gap-2">
-                        <div className="p-2 rounded-2xl bg-green-700">
+                        <div className="p-1 sm:p-2 rounded-2xl bg-green-700">
                             <Image
                                 src={logoImg}
                                 alt='logo'
@@ -23,7 +23,7 @@ const HeaderPage = () => {
                         </div>
                         <div className="flex flex-col gap-1">
                             <h1 className='text-[16px] font-extrabold'>বাজার দর</h1>
-                            <p className='text-xs font-semibold text-gray-500'>{date.toLocaleDateString("bn-BD", {
+                            <p className='text-[10px] sm:text-xs font-semibold text-gray-500'>{date.toLocaleDateString("bn-BD", {
                                 dateStyle: 'full'
                             })}</p>
                         </div>
