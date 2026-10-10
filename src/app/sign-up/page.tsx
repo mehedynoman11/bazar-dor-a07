@@ -1,5 +1,6 @@
 'use client'
 
+import GoogleBtn from "@/components/GoogleBtn";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -57,6 +58,7 @@ const SignUpPage = () => {
                         <button type="submit" className="btn bg-green-700 text-white mt-4">সাইন আপ করুন</button>
                     </fieldset>
                 </form>
+                        <GoogleBtn />
             </div>
         </div>
     );
