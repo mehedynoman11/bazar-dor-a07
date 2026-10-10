@@ -47,7 +47,7 @@ export default async function Home() {
         <p className="text-sm text-gray-500">মোট ৩৩টি পণ্য দেখানো হচ্ছে</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {
-            products.slice(0,30).map(product => {
+            products.slice(0,33).map(product => {
               return (
                 <ProductCard key={product.id} product={product} />
               )
