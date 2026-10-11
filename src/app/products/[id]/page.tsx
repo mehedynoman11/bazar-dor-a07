@@ -31,7 +31,7 @@ interface Markets {
 
 const ProductDetailsPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products/${id}`);
+    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products/${id}`);
     const product: IProduct = await res.json();
     // console.log(product)
     const diff = product.today - product.yesterday;
