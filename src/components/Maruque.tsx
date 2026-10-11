@@ -1,5 +1,6 @@
 import { banglaNumber, toBnUnit } from '@/lib/utils';
 import { IProduct } from '@/type/type';
+import Link from 'next/link';
 import React from 'react';
 import MarqueeText from 'react-marquee-text';
 
@@ -13,11 +14,13 @@ const MaruquePage = async () => {
                 {headLine.map((p) => {
                     const isUp = p.change.dir === 'up';
                     return (
-                        <span key={p.id} className="mx-3 flex items-center gap-2 text-sm font-bold">
+                        <Link key={p.id} href={`/products/${p.id}`}>
+                            <span className="mx-3 flex items-center gap-2 text-sm font-bold">
                             {p.image} {p.nameBn} {banglaNumber(p.today)} টাকা/{toBnUnit(p.unit)} <span className={isUp ? 'text-red-600' : 'text-green-600'}>
                                 {isUp ? `▲ ${p.change.pct}%` : `▼ ${p.change.pct}%`}
                             </span>
                         </span> 
+                        </Link>
                     )
                 })}
             </MarqueeText>
