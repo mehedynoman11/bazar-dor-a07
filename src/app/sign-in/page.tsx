@@ -26,32 +26,35 @@ const SignInPage = () => {
         }
     }
     return (
-        <div className="flex items-center min-h-screen justify-center px-4 py-8 sm:py-12">
-            <div className="w-full max-w-sm sm:max-w-md bg-base-100 sm:shadow-xl sm:rounded-2xl p-2 sm:p-6">
-                <h2 className="text-2xl text-center text-green-600 font-bold">সাইন ইন
-                </h2>
-                <p className="text-sm font-semibold text-gray-500 text-center">বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।</p>
-                <form action="" onSubmit={onSubmit}>
-                    <fieldset className="fieldset rounded-box w-full p-4">
+        <div className="max-w-6xl container mx-auto">
+            <div className="flex items-center min-h-screen justify-center px-4 py-8 sm:py-12">
+                <div className="w-full max-w-sm sm:max-w-md bg-base-100 sm:shadow-xl sm:rounded-2xl p-2 sm:p-6">
+                    <h2 className="text-2xl text-center text-green-600 font-bold">সাইন ইন
+                    </h2>
+                    <p className="text-sm font-semibold text-gray-500 text-center">বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।</p>
+                    <form action="" onSubmit={onSubmit}>
+                        <fieldset className="fieldset rounded-box w-full p-4">
 
-                        <label className="label">ইমেইল</label>
-                        <input name='email' type="email" className="input" placeholder="you@example.com" />
+                            <label className="label">ইমেইল</label>
+                            <input name='email' type="email" className="input" placeholder="you@example.com" />
 
-                        <label className="label">পাসওয়ার্ড</label>
-                        <input name='password' type="password" className="input" placeholder="পাসওয়ার্ড" />
+                            <label className="label">পাসওয়ার্ড</label>
+                            <input name='password' type="password" className="input" placeholder="পাসওয়ার্ড" />
 
-                        <button type='submit' className="btn bg-green-600 text-white mt-4">সাইন ইন করুন</button>
-                    </fieldset>
-                </form>
-                <div className="flex flex-col justify-center">
-                    <p className="text-sm text-center w-full my-2">অথবা</p>
-                    <div className="">
+                            <button type='submit' className="btn bg-green-600 text-white mt-4">সাইন ইন করুন</button>
+                        </fieldset>
+                    </form>
+                    <div className="flex flex-col justify-center">
+                        <p className="text-sm text-center w-full my-2">অথবা</p>
+                        <div className="flex justify-center">
                             <GoogleBtn />
                         </div>
-                    <p className="text-sm font-semibold text-gray-500 my-1 text-center">অ্যাকাউন্ট আছে? <Link className="text-blue-600" href={'/sign-up'}>সাইন আপ করুন</Link></p>
+                        <p className="text-sm font-semibold text-gray-500 my-1 text-center">অ্যাকাউন্ট আছে? <Link className="text-blue-600" href={'/sign-up'}>সাইন আপ করুন</Link></p>
+                    </div>
                 </div>
             </div>
         </div>
+
     );
 };
 

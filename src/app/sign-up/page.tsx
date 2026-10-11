@@ -38,37 +38,40 @@ const SignUpPage = () => {
         }
     }
     return (
-        <div className="flex items-center justify-center px-4 py-8 sm:py-12">
-            <div className="w-full max-w-sm sm:max-w-md bg-base-100 sm:shadow-xl sm:rounded-2xl p-2 sm:p-6">
-                <h2 className="text-2xl text-center text-green-600 font-extrabold">অ্যাকাউন্ট তৈরি করুন</h2>
-                <p className="text-sm font-semibold text-gray-500 text-center">বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।</p>
-                <form action="" onSubmit={onSubmit}>
-                    <fieldset className="fieldset w-full rounded-box p-4">
-                        <label className="label">নাম</label>
-                        <input name="name" type="name" className="input" placeholder="যেমন: রহিম উদ্দিন" />
+        <div className="max-w-6xl container mx-auto">
+            <div className="flex items-center justify-center px-4 py-8 sm:py-12">
+                <div className="w-full max-w-sm sm:max-w-md bg-base-100 sm:shadow-xl sm:rounded-2xl p-2 sm:p-6">
+                    <h2 className="text-2xl text-center text-green-600 font-extrabold">অ্যাকাউন্ট তৈরি করুন</h2>
+                    <p className="text-sm font-semibold text-gray-500 text-center">বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।</p>
+                    <form action="" onSubmit={onSubmit}>
+                        <fieldset className="fieldset w-full rounded-box p-4">
+                            <label className="label">নাম</label>
+                            <input name="name" type="name" className="input" placeholder="যেমন: রহিম উদ্দিন" />
 
-                        <label className="label">ইমেইল</label>
-                        <input name="email" type="email" className="input" placeholder="you@example.com" />
+                            <label className="label">ইমেইল</label>
+                            <input name="email" type="email" className="input" placeholder="you@example.com" />
 
-                        <label className="label">পাসওয়ার্ড</label>
-                        <input name="password" type="password" className="input " placeholder="কমপক্ষে ৮ অক্ষর" required autoComplete="new-password" />
+                            <label className="label">পাসওয়ার্ড</label>
+                            <input name="password" type="password" className="input " placeholder="কমপক্ষে ৮ অক্ষর" required autoComplete="new-password" />
 
-                        <label className="label">পাসওয়ার্ড নিশ্চিত করুন</label>
-                        <input name="confirmPassword" type="password" className="input" placeholder="আবার লিখুন" required autoComplete="new-password" />
+                            <label className="label">পাসওয়ার্ড নিশ্চিত করুন</label>
+                            <input name="confirmPassword" type="password" className="input" placeholder="আবার লিখুন" required autoComplete="new-password" />
 
-                        <button type="submit" className="btn bg-green-600 text-white mt-4">সাইন আপ করুন</button>
-                    </fieldset>
-                </form>
-                <div className="flex flex-col justify-center">
-                    <p className="text-sm text-center w-full my-2">অথবা</p>
-                        <div className="">
+                            <button type="submit" className="btn bg-green-600 text-white mt-4">সাইন আপ করুন</button>
+                        </fieldset>
+                    </form>
+                    <div className="flex flex-col justify-center">
+                        <p className="text-sm text-center w-full my-2">অথবা</p>
+                        <div className="flex justify-center">
                             <GoogleBtn />
                         </div>
-                    <p className="text-sm font-semibold text-gray-500 my-1 text-center">অ্যাকাউন্ট আছে? <Link className="text-blue-600" href={'/sign-in'}>সাইন ইন করুন</Link></p>
-                </div>
+                        <p className="text-sm font-semibold text-gray-500 my-1 text-center">অ্যাকাউন্ট আছে? <Link className="text-blue-600" href={'/sign-in'}>সাইন ইন করুন</Link></p>
+                    </div>
 
+                </div>
             </div>
         </div>
+
     );
 };
 
